@@ -5,7 +5,7 @@ class Main {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		System.out.println("╔═══════════════════════╗");
-		System.out.println("║ Welcome to McDonalds! ║");
+		System.out.println("║        Welcome!       ║");
 		System.out.println("╚═══════════════════════╝");
 		System.out.print("Enter the account name: ");
 		String accountName = in.nextLine();
@@ -103,7 +103,7 @@ class Main {
 				}
 
 			} else if (choice == 5) {
-				System.out.println("Thank you for coming to McDonalds!");
+				System.out.println("Have a good day!");
 				break;
 			} else {
 				System.out.println("Invalid choice. Please enter a number between 1 and 5");
