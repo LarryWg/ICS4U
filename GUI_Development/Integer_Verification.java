@@ -64,7 +64,7 @@ class Integer_Verification extends JFrame implements ActionListener{
         if(e.getSource()==verifyButton){
             try{
                 int value = Integer.parseInt(textField.getText());
-                resultLabel.setText("\n"+value+"is an integer.");
+                resultLabel.setText("\n"+value+" is an integer.");
             }catch(NumberFormatException ee){
                 resultLabel.setText("\n"+textField.getText()+" is not an integer.");
             }
