@@ -12,6 +12,7 @@ public class Calculator implements ActionListener{
     public Calculator(){
         frame = new JFrame("Calculator");
         frame.setSize(400,250);
+        frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         panel = new JPanel(new BorderLayout());
@@ -75,6 +76,7 @@ public class Calculator implements ActionListener{
 
         frame.add(panel);
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     
     }
 
