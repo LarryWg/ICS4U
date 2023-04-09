@@ -12,6 +12,7 @@ public class RockPaperScissor implements ActionListener{
     public RockPaperScissor(){
         startFrame = new JFrame("Rock Paper Scissors");
         startFrame.setSize(500,500);
+        startFrame.setResizable(false);
         startFrame.setLayout(new GridLayout(3,1));
         startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -28,12 +29,14 @@ public class RockPaperScissor implements ActionListener{
         startFrame.add(quitButton);
 
         startFrame.setVisible(true);
+        startFrame.setLocationRelativeTo(null);
 
     }
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==instructionsButton){
             instructionFrame = new JFrame("Instructions");
             instructionFrame.setSize(500,200);
+            instructionFrame.setResizable(false);
             instructionLabel = new JLabel("<html><center>Welcome to Rock Paper Scissors! Click the button for the move you want to make. You'll play against the computer. First to 3 wins!</center></html>", SwingConstants.CENTER);
             instructionLabel.setFont(new Font("Arial", Font.PLAIN, 16));
 
@@ -46,7 +49,9 @@ public class RockPaperScissor implements ActionListener{
             instructionPanel.add(backButton, BorderLayout.SOUTH);
             instructionFrame.add(instructionPanel);
             instructionFrame.setVisible(true);
+            instructionFrame.setLocationRelativeTo(null);
             startFrame.setVisible(false);
+            
             instructionFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             
 
@@ -57,6 +62,7 @@ public class RockPaperScissor implements ActionListener{
 
             gameFrame = new JFrame("Rock Paper Scissors");
             gameFrame.setSize(500,250);
+            gameFrame.setResizable(false);
 
             rockButton = new JButton("Rock");
             rockButton.setFont(new Font("Arial", Font.BOLD, 24));
@@ -83,14 +89,13 @@ public class RockPaperScissor implements ActionListener{
 
             gameFrame.add(gamePanel);
             gameFrame.setVisible(true);
+            gameFrame.setLocationRelativeTo(null);
             startFrame.setVisible(false);
             gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             
                 
 
-        } else if (e.getSource()==quitButton){
-            System.exit(0);
         } else if (e.getSource()==backButton){
             instructionFrame.dispose();
             startFrame.setVisible(true);
@@ -138,6 +143,7 @@ public class RockPaperScissor implements ActionListener{
                 winnerPanel.add(buttonPanel, BorderLayout.SOUTH);
                 winnerFrame.add(winnerPanel);
                 winnerFrame.setVisible(true);
+                winnerFrame.setLocationRelativeTo(null);
                 winnerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             }
@@ -148,6 +154,8 @@ public class RockPaperScissor implements ActionListener{
             startFrame.setVisible(true);
             winnerFrame.dispose();
             
+        } else if (e.getSource()==quitButton){
+            System.exit(0);
         }
     }
 
